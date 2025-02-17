@@ -306,3 +306,25 @@ let ob = {
     }
  }
  console.log(largest)
+
+ function grade(stud){
+    for(let key in stud){
+        console.log(key[science]+''+key[stud])
+    }
+ }
+
+//  console.log(grade(grad))
+
+ function count(obj){
+    let counter = 0
+    for(let key in obj){
+        counter[key]=obj[key]
+        counter++;
+    }
+ }
+ let grad={
+    math:85,
+    science:20,
+    phy:30
+ }
+console.log(count(grad))
