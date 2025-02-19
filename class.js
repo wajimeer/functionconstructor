@@ -102,4 +102,22 @@ function angram(obj1,obj2){
     return true;
 
 }
-console.log(angram('listen','silent'))
+
+// debugger
+function hash(str1,str2){
+    if (str1.length!==str2.length){
+        return false;
+    }
+    const emptyobj ={}
+    for(let check of str1){
+        emptyobj[check]=(emptyobj[check]||0)+1
+    }
+    for (let check of str2){
+        if(!emptyobj[check]){
+            return false
+        }
+        emptyobj[check]--
+    }
+    return true;
+}
+console.log(hash('listen','silent'))
