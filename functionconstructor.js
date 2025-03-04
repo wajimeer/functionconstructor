@@ -319,7 +319,7 @@ let ob = {
     let counter = 0
     for(let key in obj){
         counter[key]=obj[key]
-        counter++;
+        counter ++;
     }
  }
  let grad={
@@ -328,3 +328,24 @@ let ob = {
     phy:30
  }
 console.log(count(grad))
+
+const arr =[ 1,2,3,4,5]
+let emptyarr = arr[0]
+for(let i=0; i<arr.length;i++){   
+    if(arr[i]<emptyarr){
+        emptyarr.push(arr[i])
+    } 
+}
+console.log(emptyarr)
+
+function hasDuplicate(nums) {
+    const seen = new Set();  // Ek empty Set create kiya
+    for (const num of nums) {  // Har number ko loop mein check karenge
+        if (seen.has(num)) {  // Agar Set mein pehle se hai toh duplicate hai
+            return true;
+        }
+        seen.add(num);  // Agar nahi hai toh Set mein add kar do
+    }
+    return false;  // Agar koi duplicate na mila toh false return karo
+}
+console.log(hasDuplicate([1,2,3,4,4]))

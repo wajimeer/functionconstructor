@@ -121,3 +121,16 @@ function hash(str1,str2){
     return true;
 }
 console.log(hash('listen','silent'))
+
+
+function hasDuplicate(nums) {
+    const seen = new Set();  // Ek empty Set create kiya
+    for (const num of nums) {  // Har number ko loop mein check karenge
+        if (seen.has(num)) {  // Agar Set mein pehle se hai toh duplicate hai
+            return true;
+        }
+        seen.add(num);  // Agar nahi hai toh Set mein add kar do
+    }
+    return false;  // Agar koi duplicate na mila toh false return karo
+}
+console.log(hasDuplicate([1,2,3,4,4]))
